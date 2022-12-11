@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.display-console {
+    width: 100%;
+    height: 90vh;
+    max-height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/header-bg.jpg) top center no-repeat fixed;
+    background-size: 100%;
+}
+
+.display-console .console {
+    height: 400px;
+    width: 700px;
+    backdrop-filter: blur(13px);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+.display-console .console .console-options {
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.display-console .console .console-options .options {
+    display: flex;
+    gap: 13px;
+}
+
+.display-console .console .console-options .describe {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.display-console .console .console-options .describe span {
+    margin-left: -50px;
+}
+
+.display-console .console .console-options .options .opt {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.display-console .console .console-options .options .opt:nth-child(1) { background-color: rgb(209, 10, 10); }
+.display-console .console .console-options .options .opt:nth-child(2) { background-color: rgb(243, 220, 15); }
+.display-console .console .console-options .options .opt:nth-child(3) { background-color: rgb(20, 201, 20); }
+
+.display-console .console .operation {
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.uk-sticky-placeholder {
+    position: absolute;
+}
+
+.uk-navbar {
+    background-color: transparent !important;
+}
+
+@keyframes circle-in-top-right {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(150% at top right);
+    }
+  }
+  
+[transition-style="in:circle:top-right"] {
+    animation: 4.5s cubic-bezier(.2, 1, .30, 1) circle-in-top-right both;
+}
